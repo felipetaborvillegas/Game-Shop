@@ -1,0 +1,208 @@
+@import "./variables";
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav {
+    display: flex;
+    background-color: $azuloscuro;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    img {
+        width: 200px;
+        height: 40px;
+    }
+    .fa-bars {  
+        color: $blanco;
+        font-size: 40px;
+    }
+    .left-section {
+        display: none;
+    }
+}
+
+.title {
+    height: 512px;
+    background-image: url("../images/background.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 134px 39px;
+    h1 {
+        font-size: 40px;
+        margin-bottom: 50px;
+        text-align: center;
+        color: $blanco;
+        span {
+            color: $rojo;
+        }
+    }
+    button {
+        width: 220px;
+        height: 61px;
+        display: block;
+        margin: auto;
+        background-color: $rojo;
+        border-radius: 10px;
+        border: none;
+        color: $blanco;
+        font-weight: 500;
+        font-size: 25px;
+    }
+}
+
+main {
+    padding: 25px 55px 84px;
+    text-align: center;
+    background-color: $blanco;
+    h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    .movies{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;  
+        margin-bottom: 85px;    
+        .movie {
+            background-color: $full-white;
+            width: 240px;
+            height: 322px;
+            margin-top: 30px;
+            img{
+                width: 130px;
+                height: 163px;
+                margin: 30px 55px;
+            }
+            .movie-info {
+                text-align: left;
+                margin-left: 20px;
+                margin-top: 21px;
+                font-weight: 400;
+                line-height: 18.23px;
+                .price {
+                    font-size: 20px;   
+                }
+                .credit {
+                    font-size: 13px;
+                }
+                .delivery {
+                    font-size: 10px;
+                    color: $green-delivery;
+                }
+            }
+        }
+    }
+    .best-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .container {
+            width: 361px;
+            height: 135px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; 
+            position: relative;
+            border-radius: 10px;
+            p{
+                position: absolute;
+                font-size: 15px;
+                color: $blanco;
+                top: 53px;
+                right: 45px;
+            }
+        }
+        .best_1 {
+            background-image: url("../images/banner_1.png");
+            margin-bottom: 30px;
+        }
+        .best_2 {
+            background-image: url("../images/banner_2.png");
+        }
+    }
+}
+
+footer {
+    .up {
+        height: 191px;
+        background-color: $azuloscuro;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 0px;
+        h2 {
+            color: $blanco;
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+        .redes-sociales {
+            display: flex;
+            i {
+                font-size: 32px;
+            }
+            .fa-twitter {
+                color: #14AED0;
+            }
+            .fa-facebook-f {
+                color: #1476D0;
+                margin: 0px 40px;
+            }
+            .fa-instagram {
+                color: #CE0CFF;
+            }
+        }
+    }
+    .down {
+        height: 25px;
+        background-color: $blanco;
+        padding: 7px 0px;
+        p {
+            font-size: 10px;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    nav {
+        justify-content: space-between;
+        padding: 38px;
+        height: 100px;
+        .fa-bars {
+            display: none;
+        }
+        .left-section {
+            display: flex;
+            justify-content: space-between;
+            ul {
+                display: inline-block;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                font-weight: 700;
+                li {
+                    margin-left: 8px;
+                    color: $blanco;
+                }
+            }
+            .fa-cart-shopping {
+                display: inline-block;
+                color: $rojo;
+                margin-left: 40px;
+                font-size: 24px;
+            }
+        }
+    }
+    footer{
+        .up {
+            flex-direction: row;    
+        }
+    }
+}
